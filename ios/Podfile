@@ -31,12 +31,14 @@ target 'FireReport' do
     # Use the following line instead:
     #pod 'GLog', :podspec => "#{rn_path}/third-party-podspecs/GLog.podspec"
     pod 'Folly', :podspec => "#{rn_path}/third-party-podspecs/Folly.podspec"
-  
+    pod 'react-native-camera', path: '../node_modules/react-native-camera'
     # react-native-maps dependencies
     pod 'react-native-maps', path: rn_maps_path
     pod 'react-native-google-maps', path: rn_maps_path  # Unomment this line if you want to support GoogleMaps on iOS
     pod 'GoogleMaps'  # Uncomment this line if you want to support GoogleMaps on iOS
     pod 'Google-Maps-iOS-Utils' # Uncomment this line if you want to support GoogleMaps on iOS
+    pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   end
   
   post_install do |installer|
