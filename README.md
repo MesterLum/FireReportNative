@@ -1,12 +1,12 @@
 *Space Apps Challenge - FireReport app*
 
-#TODOS#
+# TODOS
 
-####General####
+### General
 - [x] Map Rendering for HOME
 - [] Welcome
 
-#### Users ####
+#### Users
 - [] Reports
 * - [] Capture image
 * - [] Report
