@@ -5,7 +5,10 @@ import {
     Fab,
     Icon,
     Button,
-    Text
+    Text,
+    Card,
+    CardItem,
+    Right
 } from 'native-base'
 import MapView, { Marker, Callout } from 'react-native-maps'
 // Components
@@ -31,7 +34,7 @@ export class Home extends Component {
             body: JSON.stringify({
                 "serviceId": 25,
                 "userId": 55,
-                "date1": "2015012",
+                "date1": "1970001",
                 "date2": "2018020",
                 "ulx": -120,
                 "uly": 25,
@@ -88,9 +91,28 @@ export class Home extends Component {
 
                             return (
                                 <Marker key={key} coordinate={{ latitude: element.lat, longitude: element.lon }}>
-                                    <Icon size={2} name="free-code-camp" type="FontAwesome" style={{ color: 'red' }} />
-                                    <Callout>
-                                        <Text>Hola a todos </Text>
+                                    <Callout style={{ flex: 1, position: 'relative' }}>
+                                        <Card >
+                                            <CardItem>
+                                                <Icon active name="thermometer" />
+                                                <Text>Minima: {element.temp4}°C</Text>
+                                            </CardItem>
+                                            <CardItem>
+                                                <Icon active name="thermometer" />
+                                                <Text>Maxima: {element.temp11}°C</Text>
+                                                <Right>
+                                                    <Icon name="arrow-forward" />
+                                                </Right>
+                                            </CardItem>
+                                            <CardItem>
+                                                <Icon active name="calendar" />
+                                                <Text>Fecha: {element.datetime}</Text>
+                                            </CardItem>
+                                            <CardItem>
+                                                <Icon active name="locate" />
+                                                <Text>Lat: {element.lat} Lon: {element.lon}</Text>
+                                            </CardItem>
+                                        </Card>
                                     </Callout>
                                 </Marker>
                             )
